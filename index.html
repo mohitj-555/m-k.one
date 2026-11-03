@@ -62,12 +62,17 @@
   @media (min-width:640px){.emblem{width:192px}}
   .shloka{margin-top:16px}
   @font-face{font-family:'Tiro Sanskrit';src:url(tiro-sanskrit.woff2) format('woff2');font-display:swap}
+  @font-face{font-family:'Allura';src:url(allura.woff2) format('woff2');font-display:swap}
   .shloka{font-family:'Tiro Sanskrit','Noto Serif Devanagari','Kohinoor Devanagari','Mangal',serif;letter-spacing:0}
   .shloka .title{font-size:24px;color:var(--gold);word-spacing:.25em;line-height:1.5}
   .shloka .verse{font-size:17px;color:var(--muted);margin-top:12px;line-height:1.9}
   @media (max-width:380px){.shloka .verse{font-size:15.5px}}
-  .together{font-size:12px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted);margin:24px 0 20px}
-  .names h1{font-family:var(--serif);font-weight:400;font-size:clamp(48px,13vw,72px);letter-spacing:-.01em;line-height:1.1}
+  .tribute{font-family:var(--corm);font-style:italic;font-size:19px;line-height:1.4;color:var(--charcoal);margin-top:26px;max-width:22rem}
+  .tribute span{white-space:nowrap}
+  .together span{white-space:nowrap}
+  @media (max-width:520px){.together span{display:block}}
+  .together{line-height:1.9;font-size:12px;text-transform:uppercase;letter-spacing:.3em;color:var(--muted);margin:14px 0 20px}
+  .names h1{font-family:'Allura',var(--serif);font-weight:400;font-size:clamp(64px,18vw,96px);letter-spacing:0;line-height:1.15}
   .names .amp{font-family:var(--corm);font-style:italic;font-size:26px;color:var(--gold);font-weight:300;margin:4px 0}
   .when{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:24px 0 28px;line-height:1.9}
   .orn{display:block;width:40px;height:1px;background:var(--gold);opacity:.6;margin:0 auto 28px}
@@ -197,7 +202,8 @@
     <p class="verse">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</p>
   </div>
 
-  <p class="together">Together with their families</p>
+  <p class="tribute">With the heavenly blessings of<br><span>Late Sh. Jatinder Joshi</span></p>
+  <p class="together"><span>Seeking your blessings</span> <span>on the wedding of</span></p>
 
   <div class="names">
     <h1>Mohit</h1>
@@ -248,7 +254,7 @@
           <p>Our Residence, Nurpur Bedi</p>
         </div>
         <div class="events">
-          <div class="event"><h4>Arambh Shri Ramayan</h4><span class="time"><b>9:00 AM</b></span></div>
+          <div class="event"><h4>Arambh Shri Ramayan Path</h4><span class="time"><b>9:00 AM</b></span></div>
           <div class="event"><h4>Haldi Ceremony</h4><span class="time"><b>12:00 PM</b></span></div>
           <div class="event"><h4>Mehndi</h4><span class="time"><b>6:00 PM</b></span></div>
           <div class="event"><h4>Ladies Sangeet</h4><span class="time"><b>7:00 PM</b></span></div>
@@ -397,7 +403,7 @@
   const MAPLE = 'Maple Valley, Nurpur Bedi - Balachaur Road, Punjab';
   // Times in IST. End times are estimates so the entries have a sensible length.
   const EVENTS = [
-    {name:'Arambh Shri Ramayan',     start:'2026-11-10T09:00', end:'2026-11-10T11:00', loc:RES},
+    {name:'Arambh Shri Ramayan Path',     start:'2026-11-10T09:00', end:'2026-11-10T11:00', loc:RES},
     {name:'Haldi Ceremony',          start:'2026-11-10T12:00', end:'2026-11-10T15:00', loc:RES},
     {name:'Mehndi',                 start:'2026-11-10T18:00', end:'2026-11-10T19:00', loc:RES},
     {name:'Ladies Sangeet',          start:'2026-11-10T19:00', end:'2026-11-10T23:00', loc:RES},
