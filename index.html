@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
 <title>Mohit &amp; Komal — Wedding Celebration</title>
 <meta name="description" content="10th – 13th November 2026. Join us in celebrating the wedding of Mohit &amp; Komal. View schedule and venue directions." />
 <meta property="og:title" content="The Wedding of Mohit &amp; Komal" />
@@ -375,7 +378,7 @@
   const shareText = 'Wedding Invitation — Mohit & Komal\n\nWe warmly invite you to celebrate our wedding on 12th November 2026.\n\nView the complete schedule and map directions here:';
   function shareOnWhatsApp(){
     const msg = '*' + shareText.replace('\n', '*\n') + '\n' + window.location.href;
-    window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+    window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank', 'noopener');
   }
   function shareInvite(){
     if (navigator.share) {
