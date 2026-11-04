@@ -8,7 +8,7 @@
 <meta property="og:title" content="The Wedding of Mohit &amp; Komal" />
 <meta property="og:description" content="10th – 13th November 2026 · Punjab. Join us as we celebrate our wedding. View the schedule and venue directions." />
 <meta property="og:type" content="website" />
-<meta name="theme-color" content="#FAF8F5" />
+<meta name="theme-color" content="#8B0000" />
 <meta name="color-scheme" content="only light" />
 <!-- Live address. If you move to your own domain, update these three lines. -->
 <link rel="canonical" href="https://mohitj-555.github.io/m-k.one/" />
@@ -28,13 +28,15 @@
 <style>
   :root{
     color-scheme:only light;
-    --paper:#FAF8F5; --card:#FFFFFF; --ink:#262220; --charcoal:#4A4441; --muted:#7A726D;
-    --line:#E7DFD5; --gold:#B89758; --serif:"Playfair Display",Georgia,serif;
+    /* Red theme (default, ~60%): deep red with cream text and gold accents */
+    --red:#8B0000; --cream:#FFFDD0; --goldbright:#D4AF37;
+    --paper:#8B0000; --card:rgba(255,253,208,.05); --ink:#FFFDD0; --charcoal:#F6EBC8; --muted:#E3CBA2;
+    --line:rgba(212,175,55,.38); --gold:#D4AF37; --serif:"Playfair Display",Georgia,serif;
     --corm:"Cormorant Garamond",Georgia,serif; --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:64px}
-  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
+  body{background:radial-gradient(ellipse 140% 55% at 50% 0%,#A3120F 0%,rgba(139,0,0,0) 70%) no-repeat,var(--red);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
   ::selection{background:var(--gold);color:var(--paper)}
   a{color:inherit;text-decoration:none}
   button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -45,7 +47,7 @@
   .serif{font-family:var(--serif);font-weight:400}
 
   /* Nav */
-  nav{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(231,223,213,.7)}
+  nav{position:sticky;top:0;z-index:40;background:rgba(139,0,0,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,55,.35)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;gap:12px}
   .brand{font-family:var(--corm);font-size:20px;letter-spacing:.2em;font-weight:300;text-transform:uppercase;white-space:nowrap}
   .navlinks{display:flex;gap:22px;font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);font-weight:500}
@@ -91,7 +93,11 @@
 
   /* Sections */
   section{padding:clamp(56px,10vw,88px) 16px}
-  #schedule{background:rgba(255,255,255,.75)}
+  /* Cream theme (~30%): used by the itinerary. Gold text is darkened here so it stays readable on cream. */
+  .cream{--paper:#FFF6E5; --card:#FFFBF2; --ink:#8B0000; --charcoal:#4A1C14; --muted:#7A5443; --line:#E6D49A; --gold:#9C7716;
+    background:var(--paper);color:var(--ink)}
+  .cream .event h4,.cream .time b{color:#3D1510}
+  .cream .day.main .time b{color:var(--gold)}
   .sec-head{text-align:center;margin-bottom:40px}
   .sec-head .eyebrow{color:var(--gold);font-weight:500;letter-spacing:.3em}
   .sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,7vw,36px);margin-top:8px}
@@ -145,7 +151,7 @@
   .help-link:hover{color:var(--gold)}
   .help-link:hover .icon{background:var(--gold);border-color:var(--gold);color:var(--paper)}
   /* Shared outlined button (Add all to calendar, Share on WhatsApp) */
-  .btn-outline,.cal-all{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:500;letter-spacing:.02em;border:1px solid rgba(38,34,32,.3);padding:11px 20px;transition:all .2s}
+  .btn-outline,.cal-all{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:500;letter-spacing:.02em;border:1px solid var(--gold);padding:11px 20px;transition:all .2s}
   .btn-outline:hover,.cal-all:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .btn-outline .icon,.cal-all .icon{font-size:16px}
   .btn-outline{margin-top:28px}
@@ -194,7 +200,7 @@
 
 <!-- ==================== HERO ==================== -->
 <header id="top">
-  <img class="emblem" src="ganesha.png" alt="Lord Ganesha and Om emblem" width="754" height="974" style="filter:drop-shadow(0 4px 16px rgba(184,151,88,.35))" />
+  <img class="emblem" src="ganesha.png" alt="Lord Ganesha and Om emblem" width="754" height="974" style="filter:drop-shadow(0 6px 22px rgba(0,0,0,.28))" />
 
   <div class="shloka">
     <p class="title">॥ श्री गणेशाय नमः ॥</p>
@@ -237,7 +243,7 @@
 </header>
 
 <!-- ==================== SCHEDULE ==================== -->
-<section id="schedule">
+<section id="schedule" class="cream">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Order of Events</p>
@@ -248,13 +254,13 @@
     <div class="days">
       <div class="day">
         <div class="day-head">
-          <span class="eyebrow">Day One</span>
+          <span class="eyebrow">Day One &bull; Haldi &amp; Mehndi</span>
           <h3>Tuesday, 10th November 2026</h3>
-          <p>Our Residence, Nurpur Bedi</p>
+          <p>Joshi Residence, Nurpur Bedi</p>
         </div>
         <div class="events">
           <div class="event"><h4>Arambh Shri Ramayan Path</h4><span class="time"><b>9:00 AM</b></span></div>
-          <div class="event"><h4>Haldi Ceremony</h4><span class="time"><b>12:00 PM</b></span></div>
+          <div class="event"><h4>Haldi</h4><span class="time"><b>12:00 PM</b></span></div>
           <div class="event"><h4>Mehndi</h4><span class="time"><b>6:00 PM</b></span></div>
           <div class="event"><h4>Ladies Sangeet</h4><span class="time"><b>7:00 PM</b></span></div>
         </div>
@@ -262,9 +268,9 @@
 
       <div class="day">
         <div class="day-head">
-          <span class="eyebrow">Day Two</span>
+          <span class="eyebrow">Day Two &bull; Bhog &amp; DJ Night</span>
           <h3>Wednesday, 11th November 2026</h3>
-          <p>Our Residence, Nurpur Bedi</p>
+          <p>Joshi Residence, Nurpur Bedi</p>
         </div>
         <div class="events">
           <div class="event"><h4>Bhog Shri Ramayan Path</h4><span class="time"><b>9:00 AM</b></span></div>
@@ -286,7 +292,7 @@
 
       <div class="day">
         <div class="day-head">
-          <span class="eyebrow">Day Four</span>
+          <span class="eyebrow">Day Four &bull; Reception</span>
           <h3>Friday, 13th November 2026</h3>
           <p>Maple Valley, Nurpur Bedi</p>
         </div>
@@ -403,7 +409,7 @@
   // Times in IST. End times are estimates so the entries have a sensible length.
   const EVENTS = [
     {name:'Arambh Shri Ramayan Path',     start:'2026-11-10T09:00', end:'2026-11-10T11:00', loc:RES},
-    {name:'Haldi Ceremony',          start:'2026-11-10T12:00', end:'2026-11-10T15:00', loc:RES},
+    {name:'Haldi',          start:'2026-11-10T12:00', end:'2026-11-10T15:00', loc:RES},
     {name:'Mehndi',                 start:'2026-11-10T18:00', end:'2026-11-10T19:00', loc:RES},
     {name:'Ladies Sangeet',          start:'2026-11-10T19:00', end:'2026-11-10T23:00', loc:RES},
     {name:'Bhog Shri Ramayan Path',  start:'2026-11-11T09:00', end:'2026-11-11T13:00', loc:RES},
