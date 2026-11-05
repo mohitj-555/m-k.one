@@ -139,6 +139,13 @@
   .dir-btn{flex-shrink:0;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--gold);transition:all .2s}
   .dir-btn:hover,.dir-btn:focus-visible{border-color:var(--gold);background:var(--gold);color:var(--paper);outline:none}
   .dir-btn .icon{font-size:17px}
+  /* Whole venue row is clickable: the arrow link is stretched over the row */
+  .venue{position:relative;transition:background .2s;cursor:pointer}
+  .dir-btn::after{content:"";position:absolute;inset:0} /* stretched link */
+  .venue:hover{background:rgba(201,164,76,.08)}
+  .venue:hover .dir-btn{border-color:var(--gold);background:var(--gold);color:var(--paper)}
+  .venue:active{background:rgba(201,164,76,.14)}
+  .dir-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
   /* Footer */
   footer{padding:clamp(48px,9vw,80px) 16px clamp(40px,7vw,64px);text-align:center}
